@@ -68,7 +68,8 @@ module Gmaps4rails
       else #case googlemaps which is the default
         @js_array << "#{GOOGLE}&sensor=false&client=#{client}&key=#{provider_key}&libraries=geometry#{google_libraries}&#{google_map_i18n}"
         @js_array << "https://cdn.rawgit.com/googlemaps/v3-utility-library/master/infobox/src/infobox_packed.js"  if custom_infowindow_class
-        @js_array << "https://cdn.rawgit.com/googlemaps/v3-utility-library/markerclustererplus/2.0.9/src/markerclusterer_packed.js"  if do_clustering
+        # @js_array << "https://cdn.rawgit.com/googlemaps/v3-utility-library/markerclustererplus/2.0.9/src/markerclusterer_packed.js"  if do_clustering
+        @js_array << "http://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js"  if do_clustering
         @js_array << "https://cdn.rawgit.com/googlemaps/v3-utility-library/master/richmarker/src/richmarker-compiled.js"  if rich_marker
       end
     end
